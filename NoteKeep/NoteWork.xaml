@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoteKeep.NoteWork"
+             Title="Заметка">
+    <VerticalStackLayout>
+
+        <Editor x:Name="title_note"
+                Placeholder="Заголовок"
+                FontFamily="Vernada"
+                FontSize="20"
+                HeightRequest="80"
+                IsSpellCheckEnabled="True">
+            <Editor.Keyboard>
+                <Keyboard x:FactoryMethod="Create">
+                    <x:Arguments>
+                        <KeyboardFlags>CapitalizeSentence,Spellcheck</KeyboardFlags>
+                    </x:Arguments>
+                </Keyboard>
+            </Editor.Keyboard>
+        </Editor>
+
+        <Editor x:Name="text_note"
+                Placeholder="Текст"
+                FontFamily="Vernada"
+                FontSize="18"
+                VerticalOptions="Fill"
+                IsSpellCheckEnabled="True">
+            <Editor.Keyboard>
+                <Keyboard x:FactoryMethod="Create">
+                    <x:Arguments>
+                        <KeyboardFlags>CapitalizeSentence,Spellcheck</KeyboardFlags>
+                    </x:Arguments>
+                </Keyboard>
+            </Editor.Keyboard>
+        </Editor>
+
+        <Button Text="Сохранить" Clicked="Button_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

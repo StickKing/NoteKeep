@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:notekeep="clr-namespace:NoteKeep"
+             x:DataType="notekeep:Menu"
+             x:Class="NoteKeep.Menu">
+
+   <FlyoutItem Title="Заметки"
+               Route="Note">
+       <ShellContent>
+
+           <ContentPage x:Name="NotePage" Title="Заметки">
+
+               <ContentPage.ToolbarItems>
+                   <ToolbarItem Text="Add" Clicked="AddNote"/>
+               </ContentPage.ToolbarItems>
+
+               <RefreshView x:Name="refresh_view">
+                   <CollectionView x:Name="note_items">
+                   </CollectionView>
+               </RefreshView>
+
+
+           </ContentPage>
+
+       </ShellContent>
+   </FlyoutItem>
+    <FlyoutItem Title="Напоминания">
+
+   </FlyoutItem>
+
+</Shell>
+
